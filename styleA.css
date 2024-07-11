@@ -1,0 +1,170 @@
+/* Atur font dan warna teks */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Atur tata letak halaman */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Atur header halaman */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Atur menu navigasi */
+#menu ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 15px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+#menu ul li a:hover, #menu ul li a.active {
+  border-bottom: 5px solid #333;
+  color: #fff;
+  background-color: #333;
+}
+
+/* Atur box gambar dan caption */
+#foto {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+#foto .box{
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  background: grey;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 10px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+.box {
+  width: 300px;
+  height: 300px;
+  background: grey;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.box img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30%;
+  background-color: #f8f8f8;
+  padding: 10px;
+}
+
+.caption h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.caption p {
+  margin: 5px 0 0 0;
+  font-size: 17px;
+  text-align: left;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: rgb(59, 56, 56);;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  margin-top: auto;
+}
+
+
+#contact{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(59, 56, 56);
+  display:flex;
+  justify-content: space-between;
+  height: 10px;
+  padding: 35px;
+  color:white;
+  margin-bottom: 20px;
+}
+#contact .kiri{
+  text-align: left;
+}
+#contact .kanan{
+  text-align: right;
+}
+
+#contact .kanan .logo{
+  display: inline-block;
+
+}
+#contact .kanan .logo img{
+  width:27px;
+  height: 27px;
+  margin-left: 5px;;
+}
+
+.social {
+  display: flex;
+  justify-content: right;
+}
+
+.social .logo {
+  margin-right: 10px;
+}
+
+p{
+  font-size: 20px;
+}
+.dotted {
+  text-indent: 0.5em; /* jarak indentasi dari awal baris */
+  padding-left: 0.5em; /* jarak antara titik dengan teks */
+}
+
+.dotted::before {
+  content: "•"; /* kode karakter titik */
+  font-size: 1.7em; /* ukuran titik */
+  line-height: 0.5em; /* mengatur jarak antara titik dengan teks */
+  margin-right: 0.5em; /* jarak antara titik dengan teks */
+}
+
+
+

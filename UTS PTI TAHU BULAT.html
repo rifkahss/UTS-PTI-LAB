@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Tahu Bulat</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div style="text-align: center;">
+    <div class="tampilkan-waktu">
+    <span style="color:#ffffff">
+        <div style="background:#ff000"
+        <hr style="color:#00f">
+        <b>
+        <script type="text/javascript">
+            var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+            var myDays = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+            var date = new Date();
+            var day = date.getDate();
+            var month = date.getMonth();
+            var thisDay = date.getDay(),
+            thisDay = myDays[thisDay];
+            var yy = date.getYear();
+            var year = (yy < 1000) ? yy + 1900 : yy;
+            document.write(thisDay + ', ' + day + ' ' + months[month] + ' ' + year);
+            </script></b>
+            <br><sup>
+            (Jam <script type="text/javascript">
+                var d = new Date();
+                var curr_hour = d.getHours();
+                var curr_min = d.getMinutes();
+                curr_min = curr_min + "";
+                    if (curr_min.length == 1) {
+                    curr_min = "0" + curr_min;
+                    }
+                    document.write(curr_hour + " : " + curr_min);
+                    </script>  Menit )
+                    </sup>
+                 <b>
+                <div style="background:#ff000""">
+                <span style="color:#ffffff">
+                <div class="waktusirap">
+                <script language="JavaScript">
+                    var h=(new Date()).getHours();
+                    var m=(new Date()).getMinutes();
+                    var s=(new Date()).getSeconds();
+                        if (h > 3 && h <  11) document.writeln("Halo, Selamat Pagi!");
+                        if (h > 10 && h <  15) document.writeln("Halo, Selamat Siang!");
+                        if (h > 14 && h <  18) document.writeln("Halo, Selamat Sore!");
+                        if (h > 17 || h <  4) document. writeln("Halo, Selamat Malam!");
+                </script>
+                </div>
+                </div>
+                <br><br>
+        </div>
+    </div>
+    </div>
+                </span>
+    </span>
+
+    <nav id="menu">
+            <li><a href="UTS PTI TAHU BULAT.html">Game</a></li>
+            <li><a href="about us.html">About Us</a></li>
+    </nav>
+ 
+    <div class="game">
+        <div class="main">
+            <div class="header">
+                <div class="coin">
+                    <img src= "https://i.ibb.co/LDyQJnJ/coin-removebg-preview.png" alt="koin" align="center" height="50px" width="50px">
+                    <p id="coin">0</p>
+                </div>
+                <br><br>
+                <div class="price">
+                    <p>Harga 1 Tahu: </p>
+                    <hr />
+                    <p id="price">100</p>
+                </div>
+                <br><br>
+            </div>
+            <button id="btn_autoClick">Auto Click</button>
+            <button id="btn_pause" onclick="pauseAutoClick()">Pause Auto Click</button>
+            <div class="tahu">
+                <img id="tahu" src= "https://i.ibb.co/sbKYHRr/tahubulat-removebg-preview.png" alt="tahubulat" align="center" height="150px" width="150px">
+                <p id="instruction"><h5>Tap tahu bulat untuk menambah koinMu!</h5></p>
+            </div>
+            <br><br><br>
+            <div class="items">
+                <div class="item">
+                    <div class="item_main">
+                        <img src= "https://i.ibb.co/zrWRtFQ/tahu-removebg-preview.png" alt="tahu" align="center" height="50px" width="50px">
+                    </div>
+                    <p id="price_tahu">5000</p>
+                    <button id="btn_tahu">Upgrade</button>
+                </div>
+                <div class="item">
+                    <div class="item_main">
+                        <img src= "https://i.ibb.co/3SzdJXt/telur-removebg-preview.png" alt="telur" align="center" height="50px" width="50px">
+                    </div>
+                    <p id="price_telur">5000</p>
+                    <button id="btn_telur">Upgrade</button>
+                </div>
+                <div class="item">
+                    <div class="item_main">
+                        <img src= "https://i.ibb.co/tpB1N76/minyak.png" alt="minyak" align="center" height="50px" width="50px">
+                    </div>
+                    <p id="price_minyak">5000</p>
+                    <button id="btn_minyak">Upgrade</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script type='text/javascript'>
+
+        $(document).ready(function(){
+        var tg = new Date();
+        var jm = tg.getHours();
+        if (jm > 4 && jm < 10)
+        document.body.className = "pagi";
+        else if (jm > 10 && jm < 15)
+        document.body.className = "siang";
+        else if (jm > 15 && jm < 18)
+        document.body.className = "sore";
+        else if (jm > 18 || jm < 4)
+        document.body.className = "malam";
+        });
+
+        var data = JSON.parse(localStorage.getItem('player_data')) || {
+        "coin": 1000,
+        "price": 50,
+        "lv_tahu": 1,
+        "lv_telur": 1,
+        "lv_minyak": 1
+        } 
+
+        var lvTahu = [3000, 10000, 15000, 25000, 50000, 70000]
+        var lvTelur = [15000, 25000, 30000, 50000, 70000, 90000]
+        var lvMinyak = [15000, 35000, 80000, 100000, 150000, 200000]
+
+        const tahu = document.getElementById('tahu');
+        const coin = document.getElementById('coin');
+        const price = document.getElementById('price');
+        const btnAutoClick = document.getElementById('btn_autoClick');
+        const btnTahu = document.getElementById('btn_tahu');
+        const btnTelur = document.getElementById('btn_telur');
+        const btnMinyak = document.getElementById('btn_minyak');
+        const priceTahu = document.getElementById('price_tahu');
+        const priceTelur = document.getElementById('price_telur');
+        const priceMinyak = document.getElementById('price_minyak');
+
+        let current = 0;
+
+        let autoClickIntervalId = null;
+
+        function Render() {
+            coin.innerText = kFormatter(data.coin)
+            price.innerText = data.price
+            priceTahu.innerText = data.lv_tahu >= lvTahu.length ? "Max" : lvTahu[data.lv_tahu - 1]
+            priceTelur.innerText = data.lv_telur >= lvTelur.length ? "Max" : lvTelur[data.lv_telur - 1]
+            priceMinyak.innerText = data.lv_minyak >= lvMinyak.length ? "Max" : lvMinyak[data.lv_minyak - 1]
+
+            if(data.coin < lvTahu[data.lv_tahu - 1]) {
+                btnTahu.style.backgroundColor = "#FF4E6E"
+            } else {
+                btnTahu.style.backgroundColor = "#73EA5F"
+            }
+
+            if(data.coin < lvTelur[data.lv_telur - 1]) {
+                btnTelur.style.backgroundColor = "#FF4E6E"
+            } else {
+                btnTelur.style.backgroundColor = "#73EA5F"
+            }
+
+            if(data.coin < lvMinyak[data.lv_minyak - 1]) {
+                btnMinyak.style.backgroundColor = "#FF4E6E"
+            } else {
+                btnMinyak.style.backgroundColor = "#73EA5F"
+            }
+        }
+
+        Render()
+
+        tahu.addEventListener('click', getCoin1);
+        btnAutoClick.addEventListener('click', getCoin2);
+        btnTahu.addEventListener('click', upgradeTahu);
+        btnTelur.addEventListener('click', upgradeTelur);
+        btnMinyak.addEventListener('click', upgradeMinyak);
+
+        function kFormatter(num) {
+            return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num)
+        }
+
+        function getCoin1() {
+            storeData()
+            document.getElementById('instruction').style.display = 'none'
+            tahu.classList.toggle('active')
+            data.coin += data.price
+            Render()
+
+            current += 1
+        }
+
+        function getCoin2() {
+            var button = document.getElementById('btn_autoClick');
+              
+              if(autoClickIntervalId === null) {
+                autoClickIntervalId = setInterval(function() { 
+                  button.click();
+                  data.coin += data.price;
+                  Render();
+                }, 1000);
+                current += 1;
+                storeData();
+              }
+            }
+
+        function pauseAutoClick() {
+            clearInterval(autoClickIntervalId);
+              autoClickIntervalId = null;
+            }
+
+        function upgradeTahu() {
+            if(data.lv_tahu >= lvTahu.length) {
+                return alert('Sudah batas maksimum!')
+            }
+
+            if(data.coin < lvTahu[data.lv_tahu - 1]) {
+                return alert('Yah, uang kamu tidak cukup')
+            }
+            
+            data.coin -= lvTahu[data.lv_tahu - 1]
+            data.lv_tahu += 1   
+            data.price += 50
+            storeData()
+            Render()
+            SFX()
+        }
+
+        function upgradeTelur() {
+            if(data.lv_telur >= lvTelur.length) {
+                return alert('Sudah batas maksimum!')
+            }
+
+            if(data.coin < lvTelur[data.lv_telur - 1]) {
+                return alert('Yah, uang kamu tidak cukup')
+            }
+
+            data.coin -= lvTelur[data.lv_telur - 1]
+            data.lv_telur += 1  
+            data.price += 100
+            storeData()
+            Render()
+            SFX()
+        }
+
+        function upgradeMinyak() {
+            if(data.lv_minyak >= lvMinyak.length) {
+                return alert('Sudah batas maksimum!')
+            }
+
+            if(data.coin < lvMinyak[data.lv_minyak - 1]) {
+                return alert('Yah, uang kamu tidak cukup')
+            }
+
+            data.coin -= lvMinyak[data.lv_minyak - 1]
+            data.lv_minyak += 1  
+            data.price += 150
+
+            storeData()
+            Render()
+            SFX()
+        }
+
+        function storeData() {
+            localStorage.setItem('player_data', JSON.stringify(data))
+        }
+    </script>
+
+</body>
+</html>
